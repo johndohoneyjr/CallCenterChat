@@ -61,13 +61,14 @@ const HOMESCREEN_SHOWING_LOADING_SPINNER_CREATE_THREAD = 2;
 export default (): JSX.Element => {
   const spinnerLabel = 'Creating a new chat thread...';
   const iconName = 'SkypeCircleCheck';
-  const headerTitle = 'Exceptionally simple chat app';
+  const headerTitle = 'Call Center Chat app';
+  const headerTitle2 = 'ASGN Recruiters';
   const startChatButtonText = 'Start chat';
   const listItems = [
     'Launch a conversation with a single click',
     'Real-time messaging with indicators',
-    'Invite up to 250 participants',
-    'Learn more about this'
+    'Invite up to 250 participants--Copy the browser link with Chat Thread for others to join',
+    'Learn more about '
   ];
 
   const [homeScreenState, setHomeScreenState] = useState<number>(HOMESCREEN_SHOWING_START_CHAT_BUTTON);
@@ -98,7 +99,6 @@ export default (): JSX.Element => {
   };
 
   const themePrimary = useTheme().palette.themePrimary;
-
   const onRenderListItem = useCallback(
     (item?: string, index?: number): JSX.Element => {
       const listText =
@@ -107,7 +107,7 @@ export default (): JSX.Element => {
         ) : (
           <Text>
             {item}{' '}
-            <Link href="https://docs.microsoft.com/azure/communication-services/overview" aria-label={`${item} sample`}>
+            <Link href="https://docs.microsoft.com/azure/communication-services/overview" aria-label={`${item} Azure Communication Services`}>
               {'sample'}
             </Link>
           </Text>
@@ -135,6 +135,9 @@ export default (): JSX.Element => {
         <Stack className={infoContainerStyle} tokens={infoContainerStackTokens}>
           <Text role={'heading'} aria-level={1} className={headerStyle}>
             {headerTitle}
+          </Text>
+          <Text role={'heading'} aria-level={1} className={headerStyle}>
+            {headerTitle2}
           </Text>
           <Stack className={configContainerStyle} tokens={configContainerStackTokens}>
             <Stack tokens={nestedStackTokens}>
