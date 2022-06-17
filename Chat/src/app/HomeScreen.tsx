@@ -62,7 +62,6 @@ export default (): JSX.Element => {
   const spinnerLabel = 'Creating a new chat thread...';
   const iconName = 'SkypeCircleCheck';
   const headerTitle = 'Call Center Chat app';
-  const headerTitle2 = 'ASGN Recruiters';
   const startChatButtonText = 'Start chat';
   const listItems = [
     'Launch a conversation with a single click',
@@ -135,9 +134,6 @@ export default (): JSX.Element => {
         <Stack className={infoContainerStyle} tokens={infoContainerStackTokens}>
           <Text role={'heading'} aria-level={1} className={headerStyle}>
             {headerTitle}
-          </Text>
-          <Text role={'heading'} aria-level={1} className={headerStyle}>
-            {headerTitle2}
           </Text>
           <Stack className={configContainerStyle} tokens={configContainerStackTokens}>
             <Stack tokens={nestedStackTokens}>
