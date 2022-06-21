@@ -63,3 +63,11 @@ We appreciate your feedback and energy helping us improve our services. [Please 
 2. `npm run build`
 3. `npm run package`
 4. Use the Azure extension and deploy the Chat/dist directory to your app service
+
+```mermaid
+  graph TD;
+    A-->B
+    A-->C
+    B-->D
+    C-->D
+```
